@@ -5,22 +5,23 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
     <header class="page-header">
+      <a class="logo-link" href="index.html" aria-current="page">
+        <img class="page-header-logo" src="#" alt="Логотип городка Седона">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
-          <img src="#" alt="Логотип Седона">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">
@@ -30,9 +31,8 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-              Избранное
-            </span>
+              <span class="visually-hidden">Гостиниц в избранном:</span>
+              <span class="likes-counter">12</span>
           </a>
           </li>
           <li class="navigation-item">
@@ -43,21 +43,16 @@
     </header>
     <main class="main-index">
       <h1 class="visually-hidden">
-        Седона
+        Седона - город в Аризоне
       </h1>
-      <section class="intro">
-        <h2 class="visually-hidden">Интро</h2>
-        <div class="welcome">
-          <p>WELCOME</p>
-          <p>to the gorgeous</p>
-          <p>SEDONA</p>
-          <p>"Because the Grand Canyon sucks!"</p>
-        </div>
-        <div>
-          <p>Седона — небольшой городок в Аризоне,
+      <section class="hero">
+        <h2 class="visually-hidden">Главный баннер сайта</h2>
+        <img src="" alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+        <div class="transition-text">
+          <h2 class="transition-text-title">Седона — небольшой городок в Аризоне,
             заслуживающий большего!
-          </p>
-          <p>
+          </h2>
+          <p class="transition-text-content">
             Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
           </p>
         </div>
@@ -86,71 +81,71 @@
             <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
-        <div>
-          <p>
+        <div class="reasons">
+          <h3 class="reasons-title">
             Приезжайте в Седону отдохнуть в комфорте и уюте!
-          </p>
-          <p>
+          </h3>
+          <p class="reasons-content">
             Опытный персонал и качественное обслуживание!
           </p>
-          <ul>
-            <li>
-              <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <ul class="resons-list">
+            <li class="reasons-item">
+              <h3 class="reasons-title">Жильё</h3>
+              <p class="reasons-content">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li>
-              <h3>Еда</h3>
-              <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <li class="reasons-item">
+              <h3 class="reasons-title">Еда</h3>
+              <p class="reasons-content">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li>
-              <h3>Сувениры</h3>
-              <p>Не только китайского, но и настоящего местного производства!</p>
+            <li class="reasons-item">
+              <h3 class="reasons-title">Сувениры</h3>
+              <p class="reasons-content">Не только китайского, но и настоящего местного производства!</p>
             </li>
           </ul>
         </div>
       </section>
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <p>Заинтересовались?</p>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button type="button" class="popup-open-button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+        <h3 class="hotel-search-title">Заинтересовались?</h3>
+        <p class="hotel-search-content">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button type="button" class="popup-open-button">Поиск гостиницы в Седоне</button>
       </section>
       <section class="subscription">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p>Подпишитесь на рассылку</p>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="" method="post">
-          <input type="email" value="Ваш e-mail">
+        <h3 class="subscription-title">Подпишитесь на рассылку</h3>
+        <p class="subscription-content">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" aria-label="Форма подписки на рассылку">
+          <label for="subscription-email" class="visually-hidden">Введите ваш e-mail</label>
+          <input type="email" id="subscription-email" placeholder="Ваш e-mail">
           <button type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer>
-      <section class="socials">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul>
-          <li>
-            <a href="https://vk.com/htmlacademy">
+    <footer class="page-footer">
+      <div class="socials">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <ul class="socials-list">
+          <li class="socials-item">
+            <a class="socials-link" href="https://vk.com/htmlacademy">
               <img src="" alt="Вконтакте">
             </a>
           </li>
-          <li>
-            <a href="https://t.me/htmlacademy">
+          <li class="socials-item">
+            <a class="socials-link" href="https://t.me/htmlacademy">
               <img src="" alt="Телеграм">
             </a>
           </li>
-          <li>
-            <a href="https://www.youtube.com/user/htmlacademyru">
+          <li class="socials-item">
+            <a class="socials-link" href="https://www.youtube.com/user/htmlacademyru">
               <img src="" alt="YouTube">
             </a>
           </li>
         </ul>
-      </section>
-      <div class="phone-number">
-        <p>+7 (812) 812-12-12</p>
       </div>
-      <div class="html-academy-logo">
-        <a href="https://htmlacademy.ru/">
+      <div class="tel">
+        <a class="tel-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </div>
+      <div class="academy-logo">
+        <a class="academy-logo-link" href="https://htmlacademy.ru/">
           <img src="" alt="Логотип HTMl Academy">
         </a>
       </div>
