@@ -43,7 +43,6 @@ select {
   text-transform: capitalize;
 }
 
-
 .likes-counter {
   font-size: 10px;
   line-height: 10px;
@@ -54,8 +53,9 @@ select {
 .hero {
   background-color: #5f9ea0;
   background-image: url("../images/hero-divider.png"), url("../images/hero-background.jpg");
+  background-size: 100% auto, cover;
   background-repeat: no-repeat;
-  background-position: bottom, center ;
+  background-position: left bottom, left top;
 }
 
 .button-small {
@@ -69,17 +69,12 @@ select {
 }
 
 .button-first {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 50px;
-  gap: 10px;
   width: 160px;
   height: 36px;
   background: #756157;
   border-radius: 4px;
 }
+
 .transition-text-title {
   width: 620px;
   height: 72px;
@@ -245,6 +240,10 @@ select {
   color: #333333;
 }
 
+.reasons-item:nth-child(odd) {
+  background: rgba(131, 179, 211, 0.12);
+}
+
 .hotel-search-title {
   width: 297px;
   height: 36px;
@@ -277,19 +276,19 @@ select {
 }
 
 .button-big {
-width: 275px;
-height: 36px;
+  width: 275px;
+  height: 36px;
 
-font-family: 'PT Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 36px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
 
-text-align: center;
-text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
 
-color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .popup-open-button {
@@ -328,8 +327,6 @@ color: #FFFFFF;
   text-align: center;
 
   color: #FFFFFF;
-
-  -webkit-text-stroke: 1px #000000;
 }
 
 .subscription {
@@ -485,6 +482,10 @@ input[type="email"] {
   line-height: 21px;
 
   color: #333333;
+}
+
+.select-control {
+  background-color: #ffffff;
 }
 
 .hotel-title {
