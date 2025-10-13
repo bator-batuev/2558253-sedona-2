@@ -7,13 +7,14 @@
   </head>
 
   <body>
+    <div class="page-container">
     <header class="page-header">
       <a class="logo-link" href="index.html" aria-current="page">
         <img class="page-header-logo" src="images/logo-sedona.svg" alt="Логотип городка Седона" width="140" height="70">
       </a>
 
       <nav class="navigation">
-        <ul class="navigation-list">
+        <ul class="navigation-list list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
@@ -25,20 +26,20 @@
           </li>
         </ul>
 
-        <ul class="navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="navigation-user-list list">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Гостиниц в избранном:</span>
               <span class="likes-counter">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link button-first button-small" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -49,7 +50,7 @@
         <header class="inner-nav">
           <h1 class="inner-nav-title">Гостиницы Седоны</h1>
           <nav class="breadcrumbs">
-            <ol class="breadcrumbs-list">
+            <ol class="breadcrumbs-list list">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
                   <span class="visually-hidden">Главная</span>
@@ -64,49 +65,57 @@
 
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filter-amenities">
-            <legend class="amenities-title">Инфраструктура:</legend>
-            <ul class="amenities-list">
-              <li class="amenities-item">
+          <fieldset class="filter-amenities filter-group">
+            <legend class="amenities-title filter-group-legend">Инфраструктура:</legend>
+            <ul class="filter-group-list list">
+              <li class="filter-group-item">
                 <input class="amenities-checkbox" type="checkbox" name="pool" id="pool" checked>
                 <label class="amenities-checkbox" for="pool">Бассейн</label>
               </li>
-              <li class="amenities-item">
+              <li class="filter-group-item">
                 <input class="amenities-checkbox" type="checkbox" name="parking" id="parking" checked>
                 <label class="amenities-checkbox" for="parking">Парковка</label>
               </li>
-              <li class="amenities-item">
+              <li class="filter-group-item">
                 <input class="amenities-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
                 <label class="amenities-checkbox" for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-housing">
-            <legend class="housing-title">Тип Жилья:</legend>
-            <ul class="housing-list">
-              <li class="housing-item">
+          <fieldset class="filter-housing filter-group">
+            <legend class="housing-title filter-group-legend">Тип Жилья:</legend>
+            <ul class="filter-group-list list">
+              <li class="filter-group-item">
                 <input class="housing-checkbox" type="radio" name="housing-type" id="hotel" value="hotel" checked>
                 <label class="housing-checkbox" for="hotel">Гостиница</label>
               </li>
-              <li class="housing-item">
+              <li class="filter-group-item">
                 <input class="housing-checkbox" type="radio" name="housing-type" id="motel" value="motel">
                 <label class="housing-checkbox" for="motel">Мотель</label>
               </li>
-              <li class="housing-item">
+              <li class="filter-group-item">
                 <input class="housing-checkbox" type="radio" name="housing-type" id="apartment" value="apartment">
                 <label class="housing-checkbox" for="apartment">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-price">
-            <legend class="price-title">Стоимость, ₽</legend>
+          <fieldset class="filter-price filter-group">
+            <legend class="price-title filter-group-legend">Стоимость, ₽</legend>
+            <div class="price-control">
+              <div class="price-control-from price-field">
             <label class="price-label" for="min-price">От</label>
-            <input type="number" name="min-price" id="min-price" placeholder="0" value="0">
+            <input class="price-field-input" type="number" name="min-price" id="min-price" placeholder="0" value="0">
+                </div>
+                <div class="price-control-to price-field">
             <label class="price-label" for="max-price">До</label>
-            <input type="number" name="max-price" id="max-price" placeholder="9000" value="9000">
+            <input class="price-field-input" type="number" name="max-price" id="max-price" placeholder="9000" value="9000">
+                </div>
+            </div>
           </fieldset>
+          <div class="filter-buttons">
           <button class="filter-apply-button button-small" type="submit">Применить</button>
           <button class="filter-reset-button button-small" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
 
@@ -120,7 +129,7 @@
             <option class="select-option" value="max-to-min">Сначала дорогие</option>
             <option class="select-option" value="popular">По популярности</option>
           </select>
-          <ul class="view-list">
+          <ul class="view-list list">
             <li class="view-item">
               <a class="view-toggle-link view-selected" href="catalog.html?view=tile">
                 <span class="visually-hidden">Плитками</span>
@@ -139,7 +148,7 @@
           </ul>
         </div>
 
-        <ul class="cards-list">
+        <ul class="cards-list list">
           <li class="card">
             <a class="card-image-link" href="#" tabindex="-1">
               <img class="card-image" src="images/amara-resort-and-spa.jpg" alt="Вид из каньона на звездное небо" width="300" height="212">
@@ -215,7 +224,7 @@
         </ul>
 
         <nav class="pagination" aria-label="Пагинация">
-          <ul class="pagination-list">
+          <ul class="pagination-list list">
             <li class="pagination-item pagination-item-current">
               <a class="pagination-link pagination-link-current" href="#">1</a>
             </li>
@@ -243,7 +252,7 @@
         <p class="subscription-content subscription-content-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscription-email">Введите ваш e-mail</label>
-          <input type="email" name="email" id="subscription-email" placeholder="Ваш e-mail" required />
+          <input class="subscription-email" type="email" name="email" id="subscription-email" placeholder="Ваш e-mail" required />
           <button class="subscription-button button-big" type="submit">Подписаться</button>
         </form>
       </section>
@@ -276,5 +285,6 @@
         <span class="visually-hidden">Сделано в html academy</span>
       </a>
     </footer>
+    </div>
   </body>
 </html>
