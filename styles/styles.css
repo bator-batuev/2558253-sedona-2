@@ -107,15 +107,11 @@ select {
   align-items: center;
 }
 
-.navigation-item {
-  padding: 20px 16px;
-}
-
 .navigation-user-link {
   min-width: 20px;
   min-height: 24px;
   padding: 20px 12px;
-  display: block;
+
   text-align: center;
 }
 .navigation-user-link.button-first {
@@ -137,6 +133,8 @@ select {
 }
 .navigation-link,
 .navigation-user-link {
+  display: block;
+  padding: 20px 16px;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -146,9 +144,36 @@ select {
   text-transform: capitalize;
 }
 
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+}
+
+.search-link {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.favorites-link {
+  position: relative;
+  background-image: url("../images/icons/favorites.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .likes-counter {
+  padding: 5px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
   font-size: 10px;
   line-height: 10px;
+  font-weight: 400;
+  color: #ffffff;
   background: #7db54f;
   border-radius: 10px;
 }
@@ -390,6 +415,23 @@ select {
   flex-grow: 1;
 }
 
+.reasons-list .reasons-item {
+  background-repeat: no-repeat;
+  background-position: center 81px;
+}
+
+.reasons-list .housing {
+  background-image: url("../images/icons/housing.svg");
+}
+
+.reasons-list .food {
+  background-image: url("../images/icons/food.svg");
+}
+
+.reasons-list .gifts {
+  background-image: url("../images/icons/gifts.svg");
+}
+
 .hotel-search {
   margin: 0 auto 96px;
   padding: 96px 70px 0;
@@ -539,8 +581,34 @@ input[type="email"] {
 }
 .socials-list {
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.socials-item {
+  width: 47px;
+  height: 40px;
+}
+
+.socials-link {
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 13px 12px;
+  width: 24px;
+  height: 14px;
+  display: block;
+}
+
+.logo-vk {
+  background-image: url("../images/icons/vk.svg");
+}
+
+.logo-telegram {
+  background-image: url("../images/icons/telegram.svg");
+}
+
+.logo-youtube {
+  background-image: url("../images/icons/youtube.svg");
 }
 
 .tel-link {
@@ -555,6 +623,23 @@ input[type="email"] {
   text-transform: uppercase;
 
   color: #000000;
+}
+
+.academy-logo-link {
+  display: block;
+  width: 115px;
+  height: 33px;
+  background-image: url("../images/logo-academy.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-home {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/home-page.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hotels-filter {
@@ -586,6 +671,7 @@ input[type="email"] {
 .breadcrumbs-list {
   margin: 0 0 40px;
   display: flex;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 21px;
   text-align: left;
@@ -594,6 +680,7 @@ input[type="email"] {
 .breadcrumbs-item:not(:last-child) {
     margin-right: 10px;
     padding-right: 18px;
+    padding-top: 5px;
 }
 
 .breadcrumbs-link {
@@ -766,6 +853,11 @@ input[type="email"] {
   font-size: 18px;
   line-height: 21px;
   background-color: #ffffff;
+}
+
+.view-list {
+  display: grid;
+  
 }
 
 .cards-list {
