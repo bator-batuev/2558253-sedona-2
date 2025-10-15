@@ -80,6 +80,7 @@ select {
 
 .page-header {
   display: flex;
+  column-gap: 30px;
   flex-wrap: wrap;
   padding: 0 70px;
 }
@@ -120,7 +121,6 @@ select {
 }
 
 .logo-link {
-  margin-right: 30px;
   margin-bottom: -6px;
   z-index: 1;
 }
@@ -154,6 +154,7 @@ select {
   background-position: center;
   min-width: 20px;
   min-height: 20px;
+  padding: 12px 22px;
 }
 
 .favorites-link {
@@ -163,6 +164,7 @@ select {
   background-position: center;
   min-width: 20px;
   min-height: 20px;
+  padding: 12px 22px;
 }
 
 .likes-counter {
@@ -216,6 +218,28 @@ select {
   line-height: 20px;
   text-transform: uppercase;
   color: #ffffff;
+  border: none;
+}
+
+.stars {
+  display: inline;
+  margin: 0;
+  height: 17px;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: space;
+  margin-top: 10px;
+}
+
+.two-stars {
+    width: 42px;
+}
+
+.three-stars {
+    width: 66px;
+}
+
+.four-stars {
+  width: 89px;
 }
 
 .button-first {
@@ -490,6 +514,7 @@ select {
   background: #756157;
   border-radius: 4px;
   padding: 8px 50px;
+  border: none;
 }
 
 .subscription {
@@ -531,12 +556,12 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  padding: 96px 70px 104px;
+  padding: 96px 0 104px;
 }
 
 .subscription-inner {
   background-color: #ffffff;
-  padding: 96px 258px 104px;
+  padding: 96px 0 104px;
 }
 
 .subscription-title-inner,
@@ -574,10 +599,12 @@ input[type="email"] {
 }
 
 .page-footer {
-  padding: 30px 70px 40px;
+  padding: 40px 70px 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 .socials-list {
   margin: 0;
@@ -594,9 +621,12 @@ input[type="email"] {
   background-repeat: no-repeat;
   background-position: center;
   padding: 13px 12px;
-  width: 24px;
-  height: 14px;
-  display: block;
+
+}
+.socials-link::not(:last-child) {
+  display: flex;
+  width: 48px;
+  height: 40px;
 }
 
 .logo-vk {
@@ -857,7 +887,7 @@ input[type="email"] {
 
 .view-list {
   display: grid;
-  
+
 }
 
 .cards-list {
@@ -868,13 +898,16 @@ input[type="email"] {
 
 .card {
   padding: 20px 18px;
-    border: 1px solid #e5e5e5;
-    box-sizing: border-box;
-    border-radius: 4px;
-    display: grid;
-    grid-template-columns: 140px 140px;
-    grid-template-rows: min-content 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+  box-shadow: 0 0 0 1px #e6e6e6;
+}
+
+.card-image-link,
+.hotel-title-link {
+  grid-column: 1/-1;
 }
 
 .hotel-title {
@@ -883,12 +916,20 @@ input[type="email"] {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-
+  text-align: start;
+  margin: 0;
   color: #000000;
 }
 
 .hotel-title-link {
   text-decoration-line: none;
+}
+.card-housing-type {
+  text-align: start;
+}
+
+.card-min-price {
+  text-align: end;
 }
 
 .card-housing-type,
@@ -898,25 +939,35 @@ input[type="email"] {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-
+  margin: 0;
   color: #333333;
 }
 
 .more-link {
   text-decoration-line: none;
-
+  padding: 8px 18px;
   background: #756157;
   border-radius: 4px;
+  overflow-wrap: break-word;
+  width: 140px;
+  justify-self: start;
 }
 
 .add-favorites-button {
   background: #82b3d3;
+  padding: 8px 18px;
   border-radius: 4px;
+  width: 140px;
+  justify-self: end;
+  overflow-wrap: break-word;
 }
 
 .in-favorites-button {
   background: #7db54f;
   border-radius: 4px;
+  width: 140px;
+  justify-self: end;
+  overflow-wrap: break-word;
 }
 
 .card-rating {
@@ -925,28 +976,25 @@ input[type="email"] {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-
+  margin: 0;
   text-transform: uppercase;
-
+  text-align: center;
+  align-content: center;
   color: #333333;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .pagination-list {
   display: flex;
   margin: 0;
-  padding: 0;
-}
-.pagination-item {
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  background: #82b3d3;
-  border-radius: 4px;
+  padding: 80px 0 60px;
+  gap: 8px;
 }
 
-.pagination-item-current {
+.pagination-link.pagination-link-current {
   background-color: #f2f2f2;
+
 }
 
 .pagination-link {
@@ -960,10 +1008,25 @@ input[type="email"] {
   text-transform: uppercase;
 
   color: #ffffff;
+  min-width: 60px;
+
+  background: #82b3d3;
+  border-radius: 4px;
+  align-items: center;
+  padding: 12px 12px;
+  display: block;
 }
 
-.pagination-link-current {
+.pagination-link-current,
+.pagination-link-dots {
   color: #000000;
+  min-width: 60px;
+  display: block;
+}
+
+.pagination-link-dots {
+  background-color: #ffffff;
+  padding-top: 16px;
 }
 
 .socials-link,
