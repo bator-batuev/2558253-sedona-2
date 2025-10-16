@@ -900,7 +900,6 @@ input[type="email"] {
   padding: 20px 18px;
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-columns: min-content 1fr;
   gap: 20px;
   box-shadow: 0 0 0 1px #e6e6e6;
 }
