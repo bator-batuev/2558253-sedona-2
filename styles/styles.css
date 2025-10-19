@@ -134,7 +134,7 @@ select {
 .navigation-link,
 .navigation-user-link {
   display: block;
-  padding: 20px 16px;
+  padding: 20px 16px 0;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -144,8 +144,12 @@ select {
   text-transform: capitalize;
 }
 
-.navigation-link-current {
-  border-bottom: 2px solid #756257;
+.navigation-link-current::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #756257;
+  margin-top: 20px;
 }
 
 .search-link {
@@ -207,7 +211,7 @@ select {
 
 .advantage-wide {
   padding: 102px 85px;
-  flex-basis: 33%;
+  width: 400px;
 }
 
 .button-small {
@@ -347,12 +351,12 @@ select {
 .advantages-item:not(:first-child):not(:last-child):nth-child(odd) {
   background: rgba(131, 179, 211, 0.20);
   padding: 81px 85px;
-  flex-grow: 1;
+
 }
 .advantages-item:not(:first-child):not(:last-child):nth-child(even) {
   background: rgba(131, 179, 211, 0.12);
   padding: 81px 85px;
-  flex-grow: 1;
+
 }
 
 .advantages {
@@ -521,9 +525,9 @@ select {
   text-align: center;
 }
 .subscription-title {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
-
+  max-width: 475px;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -608,21 +612,20 @@ input[type="email"] {
 }
 .socials-list {
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.socials-item {
-  width: 47px;
-  height: 40px;
+  display: flex;
+  max-width: 250px;
+  flex-wrap: wrap;
 }
 
 .socials-link {
   background-repeat: no-repeat;
   background-position: center;
   padding: 13px 12px;
-
+  width: 47px;
+  height: 40px;
+  display: block;
 }
+
 .socials-link::not(:last-child) {
   display: flex;
   width: 48px;
