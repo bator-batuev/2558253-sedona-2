@@ -304,7 +304,6 @@ select {
 .advantages-title,
 .reasons-title {
   margin: 0 auto;
-  margin-bottom: 30px;
   padding-bottom: 30px;
   max-width: 175px;
   font-family: 'PT Sans';
@@ -319,6 +318,17 @@ select {
   color: #000000;
 }
 
+.advantages-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  margin: 30px auto 0;
+}
+
+.advantages-title-wide::after {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
 .advantages-description,
 .reasons-content {
   margin: 0;
@@ -332,6 +342,9 @@ select {
   text-align: center;
 
   color: #333333;
+}
+.reasons-title {
+  margin-bottom: 30px;
 }
 
 .advantages-item,
@@ -714,6 +727,21 @@ input[type="email"] {
     margin-right: 10px;
     padding-right: 18px;
     padding-top: 5px;
+    position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icons/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 8px 15px;
+  width: 8px;
+  height: 20px;
+  top: 3px;
+  bottom: 0;
+  right: 0;
+
 }
 
 .breadcrumbs-link {
@@ -788,7 +816,9 @@ input[type="email"] {
 }
 
 .price-control {
-  display: flex;
+  display: grid;
+  grid-template-columns: 143px 143px;
+  row-gap: 36px;
 }
 
 .price-field {
@@ -797,11 +827,23 @@ input[type="email"] {
   font-size: 18px;
   line-height: 24px;
 }
-.price-control-from .price-field-input {
-  margin-right: 2px;
+.price-field-input {
+  padding: 12px 22px;
+  width: 143px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border: none;
+}
+
+.price-field-input-from {
   border-radius: 4px 0 0 4px;
 }
 
+.price-field-input-to {
+  margin-left: 2px;
+  border-radius: 0 4px 4px 0;
+}
 
 .amenities-title,
 .housing-title,
@@ -829,16 +871,19 @@ input[type="email"] {
 }
 
 .price-label {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 
-  text-align: right;
   text-transform: lowercase;
 
-  color: #000000;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .filter-apply-button {
@@ -887,6 +932,12 @@ input[type="email"] {
   height: 49px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  padding: 14px 0 12px 20px;
+  appearance: none;
+  background-image: url("../images/icons/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  cursor: pointer;
 }
 
 .view-list {
