@@ -215,8 +215,6 @@ select {
 }
 
 .button-small {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -513,8 +511,6 @@ select {
 }
 
 .button-big {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -591,6 +587,7 @@ select {
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
   border: none;
+  cursor: pointer;
 }
 
 .subscription-email {
@@ -768,20 +765,18 @@ input[type="email"] {
 }
 
 .filter-apply-button {
-  display: block;
-  width: 100%;
+  background: #82b3d3;
   padding: 8px;
-  border: none;
   border-radius: 4px;
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .filter-reset-button {
-  border: none;
+  background-color: transparent;
   border-radius: 4px;
-  background: none;
-  cursor: pointer;
   padding: 8px;
+  cursor: pointer;
 }
 
 .filter-group {
@@ -884,16 +879,6 @@ input[type="email"] {
   text-transform: lowercase;
 
   color: rgba(0, 0, 0, 0.2);
-}
-
-.filter-apply-button {
-  background: #82b3d3;
-  border-radius: 4px;
-}
-
-.filter-reset-button {
-  background-color: transparent;
-  border-radius: 4px;
 }
 
 .catalog {
